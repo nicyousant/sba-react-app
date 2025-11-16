@@ -2,49 +2,17 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
-    const [armsOpen, setArmsOpen] = useState(false);
+
     return (
         <>
             <nav className="nav" style={{ padding: "1rem", display: "flex", gap: "1rem", position: "relative" }}>
                 <Link to="/">
                     <div className="navItem">Home</div>
                 </Link>
-              
                 
-      {/* Arms dropdown toggle */}
-      <div style={{ position: "relative" }}>
-        <button
-          onClick={() => setArmsOpen(!armsOpen)}
-        >
-          Arms ▼
-        </button>
-
-        {armsOpen && (
-          <div
-            style={{
-              position: "absolute",
-              top: "100%",
-              left: 0,
-              background: "white",
-              border: "1px solid #ccc",
-              padding: "0.5rem",
-              display: "flex",
-              flexDirection: "column",
-              zIndex: 10,
-            }}
-          >
-                   <Link to="/lower-arm" onClick={() => setArmsOpen(false)}>
-              Lower Arm
-            </Link>
-            <Link to="/upper-arm" onClick={() => setArmsOpen(false)}>
-              Upper Arm
-            </Link>
-     
-
-          </div>
-        )}
-      </div>
-      
+              <Link to="/arms">
+                    <div className="navItem">Arms</div>
+                </Link>
               <Link to="/back">
                     <div className="navItem">Back</div>
                 </Link>
@@ -56,6 +24,9 @@ export default function Navbar() {
                 </Link>
                   <Link to="/shoulder">
                     <div className="navItem">Shoulders</div>
+                </Link>
+                           <Link to="/waist">
+                    <div className="navItem">Waist</div>
                 </Link>
             </nav>
 

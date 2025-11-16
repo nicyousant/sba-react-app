@@ -5,10 +5,10 @@ import Navbar from "../components/Navbar";
 import { Routes, Route, Navigate} from "react-router-dom";
 import ChestExercises from "../pages/ChestExercises";
 import BackExercises from "../pages/BackExercises";
-import LowerArmExercises from "../pages/LowerArmExercises";
-import UpperArmExercises from "../pages/UpperArmExercises";
+import ArmExercises from "../pages/ArmExercises";
 import ShoulderExercises from "../pages/ShoulderExercises";
 import NeckExercises from "../pages/NeckExercises";
+import WaistExercises from "../pages/WaistExercises";
 
 
 export default function App() {
@@ -45,6 +45,10 @@ export default function App() {
       <Routes>
                 {/* Within the element, you render html or another component */}
                 <Route path="/" element={<ExerciseDisplay exercises={exercises} />} />
+                           <Route
+                    path="/arms"
+                    element={ <ArmExercises />}
+                />
                     <Route
                     path="/back"
                     element={ <BackExercises />}
@@ -53,14 +57,7 @@ export default function App() {
                     path="/chest"
                     element={ <ChestExercises />}
                 />
-                 <Route
-                    path="/lower-arm"
-                    element={ <LowerArmExercises />}
-                />
-                       <Route
-                    path="/upper-arm"
-                    element={ <UpperArmExercises />}
-                />
+     
                            <Route
                     path="/neck"
                     element={ <NeckExercises />}
@@ -68,6 +65,10 @@ export default function App() {
                     <Route
                     path="/shoulder"
                     element={ <ShoulderExercises />}
+                />
+                              <Route
+                    path="/waist"
+                    element={ <WaistExercises />}
                 />
                 
 
