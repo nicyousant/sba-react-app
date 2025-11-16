@@ -53,7 +53,12 @@ export default function ExerciseDisplay({ exercises }) {
 
         {showMore && (
           <div className="instructions">
-                <p><strong>Instructions:</strong> {workout.instructions || "—"}</p>
+                    <strong>Instructions:</strong>
+    <ul>
+      {workout.instructions?.map((step, i) => (
+        <li key={i} className="instructionItem">{step}</li>
+      ))}
+    </ul>
 
           </div>
         )}

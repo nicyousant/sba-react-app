@@ -5,6 +5,8 @@ import Navbar from "../components/Navbar";
 import { Routes, Route, Navigate} from "react-router-dom";
 import ChestExercises from "../pages/ChestExercises";
 import BackExercises from "../pages/BackExercises";
+import LowerArmExercises from "../pages/LowerArmExercises";
+import UpperArmExercises from "../pages/UpperArmExercises";
 
 
 export default function App() {
@@ -49,6 +51,16 @@ export default function App() {
                     path="/chest"
                     element={ <ChestExercises />}
                 />
+                 <Route
+                    path="/lower-arm"
+                    element={ <LowerArmExercises />}
+                />
+                       <Route
+                    path="/upper-arm"
+                    element={ <UpperArmExercises />}
+                />
+                
+
            
                 <Route path="*" element={<Navigate to='/' />} />
             </Routes>

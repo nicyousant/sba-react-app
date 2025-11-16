@@ -13,3 +13,11 @@
 .navItem {
   padding-right: 10px;
 }
+
+.instructions {
+  font-size: 10px;
+}
+
+.instructionItem {
+  list-style-type: none;
+}

@@ -1,19 +1,59 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+    const [armsOpen, setArmsOpen] = useState(false);
     return (
         <>
-            <div className="nav">
+            <nav className="nav" style={{ padding: "1rem", display: "flex", gap: "1rem", position: "relative" }}>
                 <Link to="/">
-                    <div className="navItem">Main</div>
+                    <div className="navItem">Home</div>
                 </Link>
-                <Link to="/back">
-                    <div className="navItem">Back Exercises</div>
+              
+                
+      {/* Arms dropdown toggle */}
+      <div style={{ position: "relative" }}>
+        <button
+          onClick={() => setArmsOpen(!armsOpen)}
+        >
+          Arms ▼
+        </button>
+
+        {armsOpen && (
+          <div
+            style={{
+              position: "absolute",
+              top: "100%",
+              left: 0,
+              background: "white",
+              border: "1px solid #ccc",
+              padding: "0.5rem",
+              display: "flex",
+              flexDirection: "column",
+              zIndex: 10,
+            }}
+          >
+                   <Link to="/lower-arm" onClick={() => setArmsOpen(false)}>
+              Lower Arm
+            </Link>
+            <Link to="/upper-arm" onClick={() => setArmsOpen(false)}>
+              Upper Arm
+            </Link>
+     
+
+          </div>
+        )}
+      </div>
+      
+              <Link to="/back">
+                    <div className="navItem">Back</div>
                 </Link>
                 <Link to="/chest">
-                    <div className="navItem">Chest Exercises</div>
+                    <div className="navItem">Chest</div>
                 </Link>
-            </div>
+            </nav>
+
+            
 
             {/* <ul>
                 <li>Neck</li>
