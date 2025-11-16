@@ -51,17 +51,20 @@ export default function Navbar() {
                 <Link to="/chest">
                     <div className="navItem">Chest</div>
                 </Link>
+                <Link to="/neck">
+                    <div className="navItem">Neck</div>
+                </Link>
                   <Link to="/shoulder">
-                    <div className="navItem">Shoulder</div>
+                    <div className="navItem">Shoulders</div>
                 </Link>
             </nav>
 
             
 
             {/* <ul>
-                <li>Neck</li>
+                
                 <li>Lower Arms</li>
-                <li>Shoulders</li>
+             
                 <li>Heart</li>
                 <li>Upper Arms</li>
            
