@@ -1,7 +1,9 @@
 import { useState } from "react";
 
+// https://react.dev/learn/state-a-components-memory
+// sculpture display example
 
-export default function ExerciseCarousel({ exercises }) {
+export default function ExerciseDisplay({ exercises }) {
   const [index, setIndex] = useState(0);
   const [showMore, setShowMore] = useState(false);
 

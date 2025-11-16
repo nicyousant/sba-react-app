@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import ExerciseDisplay from "../components/ExerciseDisplay";
 import "./App.css";
+import Navbar from "../components/Navbar";
+import { Routes, Route, Navigate} from "react-router-dom";
+import ChestExercises from "../pages/ChestExercises";
+import BackExercises from "../pages/BackExercises";
+
 
 export default function App() {
   const [exercises, setExercises] = useState([]);
@@ -30,8 +35,24 @@ export default function App() {
 
   return (
     <div>
+      <Navbar />
       <h1>Fitness App</h1>
-      <ExerciseDisplay exercises={exercises} />
+
+      <Routes>
+                {/* Within the element, you render html or another component */}
+                <Route path="/" element={<ExerciseDisplay exercises={exercises} />} />
+                    <Route
+                    path="/back"
+                    element={ <BackExercises />}
+                />
+                <Route
+                    path="/chest"
+                    element={ <ChestExercises />}
+                />
+           
+                <Route path="*" element={<Navigate to='/' />} />
+            </Routes>
+      
     </div>
   );
 }
