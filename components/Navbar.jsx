@@ -51,6 +51,9 @@ export default function Navbar() {
                 <Link to="/chest">
                     <div className="navItem">Chest</div>
                 </Link>
+                  <Link to="/shoulder">
+                    <div className="navItem">Shoulder</div>
+                </Link>
             </nav>
 
             

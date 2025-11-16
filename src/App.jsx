@@ -7,6 +7,7 @@ import ChestExercises from "../pages/ChestExercises";
 import BackExercises from "../pages/BackExercises";
 import LowerArmExercises from "../pages/LowerArmExercises";
 import UpperArmExercises from "../pages/UpperArmExercises";
+import ShoulderExercises from "../pages/ShoulderExercises";
 
 
 export default function App() {
@@ -58,6 +59,10 @@ export default function App() {
                        <Route
                     path="/upper-arm"
                     element={ <UpperArmExercises />}
+                />
+                    <Route
+                    path="/shoulder"
+                    element={ <ShoulderExercises />}
                 />
                 
 
