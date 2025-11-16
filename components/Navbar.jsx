@@ -5,7 +5,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className="nav" style={{ padding: "1rem", display: "flex", gap: "1rem", position: "relative" }}>
+            <nav className="nav" >
                 <Link to="/">
                     <div className="navItem">Home</div>
                 </Link>
@@ -18,6 +18,9 @@ export default function Navbar() {
                 </Link>
                 <Link to="/chest">
                     <div className="navItem">Chest</div>
+                </Link>
+                   <Link to="/legs">
+                    <div className="navItem">Legs</div>
                 </Link>
                 <Link to="/neck">
                     <div className="navItem">Neck</div>
@@ -32,18 +35,7 @@ export default function Navbar() {
 
             
 
-            {/* <ul>
-                
-                <li>Lower Arms</li>
-             
-                <li>Heart</li>
-                <li>Upper Arms</li>
-           
-                <li>Lower Legs</li>
-    
-                <li>Upper Legs</li>
-                <li>Waist</li>
-            </ul> */}
+   
         </>
     );
 }

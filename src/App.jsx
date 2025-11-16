@@ -9,7 +9,7 @@ import ArmExercises from "../pages/ArmExercises";
 import ShoulderExercises from "../pages/ShoulderExercises";
 import NeckExercises from "../pages/NeckExercises";
 import WaistExercises from "../pages/WaistExercises";
-
+import LegExercises from "../pages/LegExercises";
 
 export default function App() {
   const [exercises, setExercises] = useState([]);
@@ -56,6 +56,10 @@ export default function App() {
                 <Route
                     path="/chest"
                     element={ <ChestExercises />}
+                />
+                                 <Route
+                    path="/legs"
+                    element={ <LegExercises />}
                 />
      
                            <Route

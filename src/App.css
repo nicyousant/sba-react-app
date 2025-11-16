@@ -1,17 +1,31 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
+
 }
 
 .nav {
   display: flex;
+  font-family: Montserrat;
+  font-weight: bold;
+  margin: 20px auto;
+  gap: 10px;
+  justify-content: space-evenly;
+}
 
+.nav a {
+  text-decoration: none;
 }
 
 .navItem {
   padding-right: 10px;
+}
+
+h1 {
+  font-family: Montserrat;
+  padding: 20px 0;
 }
 
 .instructions {
