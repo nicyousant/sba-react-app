@@ -5,13 +5,13 @@ export default function Navbar() {
         <>
             <div className="nav">
                 <Link to="/">
-                    <div>Main</div>
+                    <div className="navItem">Main</div>
                 </Link>
                 <Link to="/back">
-                    <div>Back Exercises</div>
+                    <div className="navItem">Back Exercises</div>
                 </Link>
                 <Link to="/chest">
-                    <div>Chest Exercises</div>
+                    <div className="navItem">Chest Exercises</div>
                 </Link>
             </div>
 

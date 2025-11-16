@@ -5,3 +5,11 @@
   text-align: center;
 }
 
+.nav {
+  display: flex;
+
+}
+
+.navItem {
+  padding-right: 10px;
+}
