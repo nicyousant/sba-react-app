@@ -24,9 +24,9 @@ export default function ExerciseDisplay({ exercises }) {
   }
 
   return (
-    <div className="container">
+    <div>
       <div>
-        <h2>{workout.name}</h2>
+        <h3>{workout.name}</h3>
         {workout.gifUrl ? (
           <img
             src={workout.gifUrl}
@@ -36,13 +36,13 @@ export default function ExerciseDisplay({ exercises }) {
           <div className="imagePlaceholder">No image</div>
         )}
 
-        <div>
+        <p>
           <strong>Body Part:</strong> {workout.bodyParts || "—"}
-        </div>
-        <div>
+        </p>
+        <p>
           <strong>Equipment:</strong> {workout.equipments || "—"}
-        </div>
-                <div><strong>Target Muscles:</strong> {workout.targetMuscles || "—"}</div>
+        </p>
+                <p><strong>Target Muscles:</strong> {workout.targetMuscles || "—"}</p>
 
         <button
           onClick={() => setShowMore((s) => !s)}
@@ -64,11 +64,11 @@ export default function ExerciseDisplay({ exercises }) {
         )}
 
         <div className="controls">
-          <button onClick={prev}>Previous</button>
-          <span>
+          <button onClick={prev} className="controlBtn">Previous</button>
+          <span className="count">
             {index + 1} / {exercises.length}
           </span>
-          <button onClick={next}>Next</button>
+          <button onClick={next} className="controlBtn">Next</button>
         </div>
       </div>
     </div>

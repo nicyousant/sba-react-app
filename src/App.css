@@ -3,14 +3,26 @@
   margin: 0 auto;
   /* padding: 2rem; */
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
 
+.container {
+  background-color: white;
+  width: 400px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-bottom: 20px;
 }
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
   font-family: Montserrat;
   font-weight: bold;
-  margin: 20px auto;
+  margin: 20px auto 20px auto;
+  padding-bottom: 50px;
   gap: 10px;
   justify-content: space-evenly;
 }
@@ -25,13 +37,57 @@
 
 h1 {
   font-family: Montserrat;
-  padding: 20px 0;
+  padding: 10px 0 0 0;
+}
+
+h2 {
+  font-family: Montserrat;
+  padding: 5px 10px;
+  margin: 0 10px;
+}
+
+h3 {
+  font-family: Montserrat;
+  padding: 5px 10px 0 10px;
+  margin: 0 10px;
+}
+
+p {
+  font-family: Lato;
 }
 
 .instructions {
-  font-size: 10px;
+  font-size: 12px;
+  font-family: Lato;
+  width: 300px;
+  margin: 0 auto;
 }
 
 .instructionItem {
   list-style-type: none;
+  padding-bottom: 5px;
 }
+
+.controls {
+    font-family: Montserrat;
+    padding: 5px;
+}
+
+.count {
+  padding: 10px 10px;
+}
+
+.showMore {
+  font-family: Montserrat;
+  padding: 5px 5px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.controlBtn {
+  font-family: Montserrat;
+  margin: 15px;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+

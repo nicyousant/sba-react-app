@@ -38,13 +38,14 @@ export default function App() {
   if (error) return <div style={{padding:20, color:"red"}}>Error: {error}</div>;
 
   return (
-    <div>
+    <div >
       <Navbar />
-      <h1>Fitness App</h1>
+      
 
       <Routes>
+
                 {/* Within the element, you render html or another component */}
-                <Route path="/" element={<ExerciseDisplay exercises={exercises} />} />
+                <Route path="/" element={<div className="container"><h1><img src="exercise_bl.svg"/> Fitness App <img src="exercise_bl.svg"/></h1><ExerciseDisplay exercises={exercises} /></div>} />
                            <Route
                     path="/arms"
                     element={ <ArmExercises />}
