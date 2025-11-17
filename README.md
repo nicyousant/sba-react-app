@@ -20,7 +20,7 @@ Your application must meet these requirements to pass (this is your Minimum Viab
         - Wrapped the app with FavoritesProvider to share favorites information across components. 
         - Wrapped the app in BrowserRouter inside of the main.jsx file. This allows me to make routes for various pages such as Back Exercises and Chest Exercises. 
     - A link to your live site.
-        - https://extraordinary-kashata-d74cf0.netlify.app/
+        - https://sba-react-fitness-app.netlify.app/
     - Usage instructions, if relevant.
         - Use the Navigation bar at the top to click on the body part for which you'd like to see exercises. 
         - Click on the "Save to Favorites" button to add an exercise to the Favorites page.
