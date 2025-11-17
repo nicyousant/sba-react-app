@@ -18,3 +18,8 @@ Your application must meet these requirements to pass (this is your Minimum Viab
 
 - Use AJAX to make a request to an external data source like OMDBapi, and insert some of the data retrieved into the DOM.
 
+
+Bonus Features
+
+- Have one or more complex user interface modules such as a carousel, drag and drop, a sticky nav, tooltips, etc.
+- Look into localstorage so you can save data to the user's browser.

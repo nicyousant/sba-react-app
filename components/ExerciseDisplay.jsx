@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useFavorites } from "../src/context/FavoritesContext";
+
 
 // https://react.dev/learn/state-a-components-memory
 // sculpture display example
@@ -13,6 +15,11 @@ export default function ExerciseDisplay({ exercises }) {
 
   const workout = exercises[index];
 
+  const { favorites, addFavorite, removeFavorite } = useFavorites();
+
+const saved = favorites.some((f) => f.exerciseId === workout.exerciseId);
+
+
   function next() {
     setIndex((i) => (i + 1) % exercises.length);
     setShowMore(false);
@@ -26,6 +33,23 @@ export default function ExerciseDisplay({ exercises }) {
   return (
     <div>
       <div>
+        {saved ? (
+  <button
+    className="controlBtn"
+    onClick={() => removeFavorite(workout.exerciseId)}
+    style={{ background: "gold" }}
+  >
+    ★ Saved
+  </button>
+) : (
+  <button
+    className="controlBtn"
+    onClick={() => addFavorite(workout)}
+  >
+    ☆ Save to Favorites
+  </button>
+)}
+
         <h3>{workout.name}</h3>
         {workout.gifUrl ? (
           <img
@@ -72,6 +96,11 @@ export default function ExerciseDisplay({ exercises }) {
 <ul className="instructions-list">
   {workout.instructions.map((step, i) => {
     // Remove any "Step:" prefix from API text
+    // ^ start of the string
+    // Step: removes all instances of Step:
+    // \s* removes any whitespace 
+    // \d+ removes one or more digits
+    // \s* removes any whitespace after the number
     const cleanedStep = step.replace(/^Step:\s*\d+\s*/i, "");
     return (
       <li key={i} className="instruction-step">

@@ -35,6 +35,9 @@ export default function Navbar() {
                            <Link to="/waist">
                     <div className="navItem">Waist</div>
                 </Link>
+                <Link to="/favorites">
+  <div className="navItem">Favorites ★</div>
+</Link>
             </nav>
 
    

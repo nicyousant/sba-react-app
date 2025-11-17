@@ -11,6 +11,8 @@ import NeckExercises from "../pages/NeckExercises";
 import WaistExercises from "../pages/WaistExercises";
 import LegExercises from "../pages/LegExercises";
 import CardioExercises from "../pages/CardioExercises";
+import FavoritesPage from "../pages/FavoritesPage";
+
 
 export default function App() {
   const [exercises, setExercises] = useState([]);
@@ -81,7 +83,10 @@ export default function App() {
                     element={ <div className="container"><h1><img src="exercise_bl.svg"/> Fitness App <img src="exercise_bl.svg"/></h1><WaistExercises /></div>}
                 />
                 
-
+             <Route
+                    path="/favorites"
+                    element={ <div className="container"><h1><img src="exercise_bl.svg"/> Fitness App <img src="exercise_bl.svg"/></h1><FavoritesPage /></div>}
+                />
            
                 <Route path="*" element={<Navigate to='/' />} />
             </Routes>
