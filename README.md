@@ -4,7 +4,7 @@ Requirements:
 
 Your application must meet these requirements to pass (this is your Minimum Viable Product):
 
-- Built with HTML, CSS, JavaScript, and REACT.
+- Built with HTML, CSS, JavaScript, and REACT. 
 - Hosted on Netlify.
 - Frequent commits to GitHub.
 - A README.md file in your GitHub repository with:

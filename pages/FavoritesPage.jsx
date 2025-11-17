@@ -10,7 +10,7 @@ export default function FavoritesPage() {
 
   return (
     <div>
-      <h1>Favorite Exercises</h1>
+      <h2>Favorite Exercises</h2>
       <ExerciseDisplay exercises={favorites} />
     </div>
   );
