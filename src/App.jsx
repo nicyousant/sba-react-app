@@ -10,6 +10,7 @@ import ShoulderExercises from "../pages/ShoulderExercises";
 import NeckExercises from "../pages/NeckExercises";
 import WaistExercises from "../pages/WaistExercises";
 import LegExercises from "../pages/LegExercises";
+import CardioExercises from "../pages/CardioExercises";
 
 export default function App() {
   const [exercises, setExercises] = useState([]);
@@ -48,32 +49,36 @@ export default function App() {
                 <Route path="/" element={<div className="container"><h1><img src="exercise_bl.svg"/> Fitness App <img src="exercise_bl.svg"/></h1><ExerciseDisplay exercises={exercises} /></div>} />
                            <Route
                     path="/arms"
-                    element={ <ArmExercises />}
+                    element={ <div className="container"><h1><img src="exercise_bl.svg"/> Fitness App <img src="exercise_bl.svg"/></h1><ArmExercises /></div>}
                 />
                     <Route
                     path="/back"
-                    element={ <BackExercises />}
+                    element={ <div className="container"><h1><img src="exercise_bl.svg"/> Fitness App <img src="exercise_bl.svg"/></h1><BackExercises /></div> }
+                />
+                  <Route
+                    path="/cardio"
+                    element={ <div className="container"><h1><img src="exercise_bl.svg"/> Fitness App <img src="exercise_bl.svg"/></h1><CardioExercises /></div> }
                 />
                 <Route
                     path="/chest"
-                    element={ <ChestExercises />}
+                    element={ <div className="container"><h1><img src="exercise_bl.svg"/> Fitness App <img src="exercise_bl.svg"/></h1><ChestExercises /></div> }
                 />
                                  <Route
                     path="/legs"
-                    element={ <LegExercises />}
+                    element={ <div className="container"><h1><img src="exercise_bl.svg"/> Fitness App <img src="exercise_bl.svg"/></h1><LegExercises /></div>}
                 />
      
                            <Route
                     path="/neck"
-                    element={ <NeckExercises />}
+                    element={ <div className="container"><h1><img src="exercise_bl.svg"/> Fitness App <img src="exercise_bl.svg"/></h1><NeckExercises /></div>}
                 />
                     <Route
                     path="/shoulder"
-                    element={ <ShoulderExercises />}
+                    element={ <div className="container"><h1><img src="exercise_bl.svg"/> Fitness App <img src="exercise_bl.svg"/></h1><ShoulderExercises /></div>}
                 />
                               <Route
                     path="/waist"
-                    element={ <WaistExercises />}
+                    element={ <div className="container"><h1><img src="exercise_bl.svg"/> Fitness App <img src="exercise_bl.svg"/></h1><WaistExercises /></div>}
                 />
                 
 

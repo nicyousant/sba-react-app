@@ -10,11 +10,15 @@ export default function Navbar() {
                     <div className="navItem">Home</div>
                 </Link>
                 
+                
               <Link to="/arms">
                     <div className="navItem">Arms</div>
                 </Link>
               <Link to="/back">
                     <div className="navItem">Back</div>
+                </Link>
+                    <Link to="/cardio">
+                    <div className="navItem">Cardio</div>
                 </Link>
                 <Link to="/chest">
                     <div className="navItem">Chest</div>

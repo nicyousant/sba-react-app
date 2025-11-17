@@ -9,7 +9,7 @@
 
 .container {
   background-color: white;
-  width: 400px;
+  width: 360px;
   margin: 0 auto;
   border: 1px solid gray;
   border-radius: 5px;
@@ -25,10 +25,17 @@
   padding-bottom: 50px;
   gap: 10px;
   justify-content: space-evenly;
+  height: 25px;
 }
 
 .nav a {
   text-decoration: none;
+    color: black;
+}
+
+.nav a:hover {
+  color: white;
+  background-color: black;
 }
 
 .navItem {
@@ -61,11 +68,15 @@ p {
   font-family: Lato;
   width: 300px;
   margin: 0 auto;
+  padding-left: 0;
+  text-align: center;
 }
 
 .instructionItem {
   list-style-type: none;
+  margin-left: 0;
   padding-bottom: 5px;
+  padding-left: 0;
 }
 
 .controls {
