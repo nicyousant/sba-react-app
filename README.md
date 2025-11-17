@@ -7,10 +7,11 @@ Your application must meet these requirements to pass (this is your Minimum Viab
 - Built with HTML, CSS, JavaScript, and REACT. 
 - Hosted on Netlify.
 - Frequent commits to GitHub.
+    - https://github.com/nicyousant/sba-react-app
 - A README.md file in your GitHub repository with:
 
     - Explanations of the technologies used.
-        - useEffect fetches exercises from the API (Chest, Back, Arms). Data is stored in useState(exercises).
+        - useEffect fetches exercises from the API. Data is stored in useState(exercises).
         - setIndex updates the current exercise. React re-renders ExerciseDisplay with the new exercise.
         - setShowMore toggles instructions. React re-renders only the instructions section.
         - When user clicks "Save to Favorites", useContext calls addFavorite(workout) from FavoritesContext. Favorites list is updated globally, so any page can see the change.
@@ -19,6 +20,7 @@ Your application must meet these requirements to pass (this is your Minimum Viab
         - Wrapped the app with FavoritesProvider to share favorites information across components. 
         - Wrapped the app in BrowserRouter inside of the main.jsx file. This allows me to make routes for various pages such as Back Exercises and Chest Exercises. 
     - A link to your live site.
+        - https://extraordinary-kashata-d74cf0.netlify.app/
     - Usage instructions, if relevant.
         - Use the Navigation bar at the top to click on the body part for which you'd like to see exercises. 
         - Click on the "Save to Favorites" button to add an exercise to the Favorites page.
