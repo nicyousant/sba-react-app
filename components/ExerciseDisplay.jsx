@@ -54,11 +54,34 @@ export default function ExerciseDisplay({ exercises }) {
         {showMore && (
           <div className="instructions">
                     <strong>Instructions:</strong>
-    <ul>
+    {/* <ul>
       {workout.instructions?.map((step, i) => (
         <li key={i} className="instructionItem">{step}</li>
       ))}
-    </ul>
+    </ul> */}
+{/* 
+    <ul className="instructions-list">
+  {workout.instructions.map((step, i) => (
+    <li key={i} className="instruction-step">
+      <span className="step-number">{i + 1}</span>
+      <span className="step-text">{step}</span>
+    </li>
+  ))}
+</ul> */}
+
+<ul className="instructions-list">
+  {workout.instructions.map((step, i) => {
+    // Remove any "Step:" prefix from API text
+    const cleanedStep = step.replace(/^Step:\s*\d+\s*/i, "");
+    return (
+      <li key={i} className="instruction-step">
+        <span className="step-number">{i + 1}</span>
+        <span className="step-text">{cleanedStep}</span>
+      </li>
+    );
+  })}
+</ul>
+
 
           </div>
         )}
